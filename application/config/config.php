@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://home159.azurewebsites.net/';
+$config['base_url']	= 'http://127.0.0.1/';
 
 /*
 |--------------------------------------------------------------------------

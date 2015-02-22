@@ -48,11 +48,12 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = '127.0.0.1';
+$db['default']['username'] = 'sa';
+$db['default']['password'] = '12345678';
+$db['default']['database'] = 'i_fate';
+$db['default']['dbdriver'] = 'sqlsrv';
+$db['default']['port'] = 1433;
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
@@ -63,6 +64,7 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+$db['default']['pconnect'] = FALSE; // Pay attention to this, codeigniter makes true for default
 
 
 /* End of file database.php */
