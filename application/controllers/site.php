@@ -21,7 +21,25 @@ class Site extends CI_Controller {
 	{
        // ini_set('display_errors', 1);
         $this->load->database();
+        
+  
 		$this->load->view('_default/header');
+  
+  $query = $this->db->query('SELECT TOP 1000 [_id]
+      ,[Guid]
+      ,[Name]
+      ,[Address]
+      ,[Phone]
+  FROM [i_fate].[dbo].[beggar]');
+
+foreach ($query->result() as $row)
+{
+    echo $row->Guid;
+    echo $row->Name;
+    echo $row->Address;
+}
+
+echo 'Total Results: ' . $query->num_rows();
 		$this->load->view('site/index_default');
 		$this->load->view('_default/footer');
 	}
